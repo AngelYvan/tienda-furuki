@@ -80,18 +80,16 @@ body{background-color: antiquewhite;}
 .navegacion1 ul{list-style:none;
 }  
 
-.navegacion1 li{width: 130px; height: 20px;
-text-align: auto;
-margin-top: 560px;
 
-}
 
 .navegacion1 li{ background: black;
 padding:20px 0px;
-text-align: center;
 margin-left:20px;
-border: 5px solid gray
+border: 5px solid gray;
+width: 130px; 
+height: 20px;
+text-align: auto;
 }
 .navegacion1 a:link
 {text-decoration:none}
-.navegacion1 a{color: white}
+.navegacion1 a{color: black}

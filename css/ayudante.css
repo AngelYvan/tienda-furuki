@@ -4,15 +4,21 @@ body, html {
   background-color: #E3DACE;
 }
 
+.navegacion1 li{
+ border:4px solid #ECBC7B;
+ padding:10px;
+ margin-left:40px;
+	
+}
 
 #menu{
 	
 	background-color: antiquewhite;
     font-size:11px; 
-	text-align:left;
-	float:left;
+	text-align:center;
+	float:center;
 	height:79px;
-	width:1380px;
+	width:100%;
 	padding-top:35.5px;
 	padding-left:0px;
 
