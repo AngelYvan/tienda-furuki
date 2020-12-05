@@ -1,4 +1,4 @@
-#fondo02{width:700px; min-height: 300px; background-color:#ef6814;
+/* #fondo02{width:700px; min-height: 300px; background-color:#ef6814;
 margin:auto; border-radius: 10px; padding: 10px}
 .pl1{font-family: sans-serif; font-size: 18; color:#e3f50f}
 .pl2{font-family: arial; font-size: 20; color:#b8c92f}
@@ -76,4 +76,73 @@ input{
     margin: 7px;
     text-align: center;
     font-size: 14px;
+} */
+
+body {
+    background-color: rgba(0, 99, 129, 0.699) !important;
+    font-family: "Raleway", Helvetica, Arial, sans-serif !important;
+}
+
+.container h1 {
+    /* 
+    margin-left: 15% !important;
+    padding-left: 15% !important; */
+    text-align: center;
+    color: white;
+    margin-top: .7em;
+    margin-bottom: .3em;
+}
+
+.formulario {
+    padding-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8em;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-weight: 700;
+    font-size: .8em;
+}
+
+.btn {
+    font-size: .98em !important;
+}
+
+.form-control {
+    font-size: .95em !important;
+}
+
+.card {
+    padding: 0em !important;
+    margin: 0em !important;
+    box-shadow: 2px 2px 1px 2px rgba(51, 51, 51, 0.08) !important;
+    border: 0px solid rgba(0, 0, 0, .125) !important;
+}
+
+.card-body {
+    padding: 2em;
+}
+
+.card-header {
+    background-color: rgb(49, 88, 160) !important;
+    text-align: center;
+    color: white;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.card-footer {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+    border: 0px;
 }

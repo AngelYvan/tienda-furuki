@@ -3,88 +3,106 @@ session_start();
 include("conexion.php");
 
 ?>
-	
-	
+
+
 <html>
+
 <head>
 	<title>CHEFS</title>
 	<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-  </head>
+
+	<link rel="stylesheet" href="css/BienvenidoChef.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 </head>
+</head>
+
 <body>
 
 
+	<div class="topnav" id="myTopnav">
 
-<!-- /Navegacion -->
+		<form action="cerrarsesion.php" method="POST">
+			<a href="ingreso.php">Regresar</a>
+			<a href="chef.php">Chefs</a>
+			<a href="clientes.php">Clientes</a>
 
-<br>
+			<a type="submit" class="button" style="float:right">Cerrar sesión</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</form>
+	</div>
 
-<div class="row">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="jumbotron">
+				<h1 class="display-4">Chefs</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quos velit iure ex, necessitatibus officiis!</p>
+				<hr class="my-4">
 
-  <div class="medium-7 large-6 columns">
-    <h1>CHEFS</h1>
-    <p class="subheader"></p>
-    <a href="chef.php"><button class="button" >Chefs</button></a>
-    <a href="clientes.php"><button class="button" >Clientes</button></a>
-    <a href="ingreso.php"><button class="button" >Regresar</button></a>
-  </div>
+			</div>
+		</div>
+		<br>
 
-  
-
-  <div class="medium-5 large-3 columns">
-    <div class="callout secondary">
-      <form action="cerrarsesion.php" method="POST">
-        <div class="row">
-          <div class="small-12 columns">
-
-			<button type="submit" class="button">Cerrar Sesión</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-
-</div>
-
-
-
-
+		<div class="tablaRes">
+			<h4 style="color:black; font-family: 'Bookman Old Style'; align-items: center; text-align: center; font-weight: 500; font-size: 1.9em; margin-bottom: 1em;"> <em>DATOS DE CHEFS </em> </h4>
+			<div style="overflow-x:auto;">
+				<table>
+					<!--generamos la tabla -->
+					<tr>
+						<!-- nombres de los campos de la tabla -->
+						<th>CODIGO</th>
+						<th>NOMBRE</th>
+						<th>APELLIDO</th>
+						<th colspan="2">OPCIONES</th>
+					</tr>
 
 
-<center><b><i><FONT COLOR="black" FACE="Bookman Old Style" size="6" height="40" width="1000" align=center> DATOS DE CHEFS  </FONT></br><br></b></i></center>
-<br>
-    <center>
-	<table border="1" > 
-		<!--generamos la tabla -->
-		<tr>
-			<!-- nombres de los campos de la tabla -->
-			<td>CODIGO</td>
-			<td>NOMBRE</td>
-			<td>APELLIDO</td>  
-	
-		</tr>
+					<?php
+					$consulta = "SELECT dni_chef, nombre_chef, apellido_chef FROM `chefs` ";
+					$datos = mysqli_query($conexion, $consulta);
 
-		<?php
-        $consulta= "SELECT dni_chef, nombre_chef, apellido_chef FROM `chefs` ";
-        $datos = mysqli_query($conexion, $consulta);
+					while ($fila = mysqli_fetch_array($datos)) {
+					?>
 
-		while($fila=mysqli_fetch_array($datos)){
-		 ?>
+						<tr>
+							<td><?php echo $fila['dni_chef'] ?></td>
+							<td><?php echo $fila['nombre_chef'] ?></td>
+							<td><?php echo $fila['apellido_chef'] ?></td>
+							<td><a href="eliminar.php?cod=<?php echo $fila['dni_chef'] ?>">ELIMINAR</a></td>
+							<td><a href="actualizar.php?cod=<?php echo $fila['dni_chef'] ?>">ACTUALIZAR</a></td>
+							
+						</tr>
+					<?php
+					}
+					?>
+				</table>
+			</div>
+		</div>
 
-		<tr>
-			<td><?php echo $fila['dni_chef'] ?></td>  
-			<td><?php echo $fila['nombre_chef'] ?></td>
-			<td><?php echo $fila['apellido_chef'] ?></td>
-			<td><a href="eliminar.php?cod=<?php echo $fila['dni_chef'] ?>">ELIMINAR</a></td>	
-			<td><a href="actualizar.php?cod=<?php echo $fila['dni_chef'] ?>">ACTUALIZAR</a></td>	
-		</tr>
-	<?php 
-	}
-	 ?>
-	</table>
-	
-	</center>
+	</div>
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
+
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/jquery/jquery-migrate.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
