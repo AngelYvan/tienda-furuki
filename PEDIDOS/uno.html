@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+
+<title>pedidos en kuro</title>
+<link rel="stylesheet" href="formatopropio.css">
+</head>
+<body>
+    <div class="row" with=100%>
+   
+    <div class="column">
+<h1>PEDIDOS</h1>
+<form action="PROCESOS.PHP" method="post" class="form-register">
+        <h2 class="form_titulo">PEDIDO</h2>
+        <div class="contenedor-inputs">
+        Su nombre: <input type="text" name="nombrecli"            placeholder="nombre" class="input-48" required><br>
+  Su telefono: <input type="text" name="telefono" placeholder="telefono" class="input-100" required><br>
+        
+            Plato:<select name="VARIABLE2">
+    <option value="Saku de pulpo">Saku de pulpo</option>
+    <option value=">Gunkan de pulpo">Gunkan de pulpo</option>
+    <option value="California">California</option>
+    <option value="Kaiozama">Kaiozama</option>
+    <option value="Kuro maki">Kuro maki</option>
+    <option value="Anticuchero">Anticuchero</option>
+    <option value="Cauche">Cauche</option>
+    <option value="Misti">Misti</option>
+    <option value="Alalau Maki">Alalau Maki</option>
+    <option value="Ceviche Nikkei al olivo">Ceviche Nikkei al olivo</option>
+    <option value="Chizu">Chizu</option>
+    </select><br>
+            
+            Can:tidad
+            <input type="text" name="CANTIDAD">
+            </div>
+            <input type="submit" value="grabar" class="btn-enviar">
+    
+    <div class="column centrar">
+    <H3 class="centrar">PANTALLA PRINCIPAL</H3>
+    <a href="PORTERO.HTML">[  PARA EL DUEÑO  ]</a> 
+    
+    
+        </div>
+        
+        </form>  
+
+    </div>
+         
+    </div>
+    
+</body>
+</html>

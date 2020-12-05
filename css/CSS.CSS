@@ -1,0 +1,40 @@
+
+.container1 {
+position: absolute;
+top: 0;
+background: #222;
+color: #fff;
+width: 100%;
+min-height: 100vh;
+display: flex;
+
+}
+
+.preloader {
+margin-left: 1220px;
+margin-top: 350px;
+
+}
+
+
+
+.preloader img {
+
+transform: translateX(-100%);
+}
+
+.cerrar {
+transform: translateY(-100%);
+transition: all 0.5s;
+}
+
+@keyframes preloader {
+90% {
+width: 100%;
+opacity: 1;
+}
+100% {
+width: 100%;
+opacity: 0;
+}
+}

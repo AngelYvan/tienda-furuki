@@ -1,0 +1,79 @@
+#fondo02{width:700px; min-height: 300px; background-color:#ef6814;
+margin:auto; border-radius: 10px; padding: 10px}
+.pl1{font-family: sans-serif; font-size: 18; color:#e3f50f}
+.pl2{font-family: arial; font-size: 20; color:#b8c92f}
+.pl3{width: 450; height: 100; float:right;
+border: 5px solid orange; border-radius: 10px; padding: 10px}
+.pl4{font-family: sans-serif; font-size: 45; color:blue}
+.pl5{font-family: sans-serif; font-size: 50; color:red}
+* {box-sizing: border-box;}
+#SALIDA{
+    COLOR RGBA(1)
+}
+body{margin: 0;
+font-family: sans-serif;
+    background:#204862;}
+h1{
+    color:#fff;
+    text-align: center;
+}
+
+.centrar {
+    text-align: center;
+}
+
+.form-register{
+    width: 95%;
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    border-radius: 7px;
+}
+.form_titulo{
+    background: deepskyblue;
+    color:#fff;
+    padding: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom: 5px solid crimson;
+}
+.contenedor-inputs{
+    padding:10px 30px;
+    display: block;
+}
+input{
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid darkgray;
+}
+.input-48{
+    width: 48%;
+}
+.input-100{
+    width: 40%
+}
+.input-20{
+    width: 20%}
+.btn-enviar{
+    background: crimson;
+    color:#fff;
+    margin: auto;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-size: 20px;
+    display: block;
+}
+.btn-enviar:active{
+    transform: scale(1.05)
+}
+.form_link{
+    width: 100%;
+    margin: 7px;
+    text-align: center;
+    font-size: 14px;
+}
