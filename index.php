@@ -1,69 +1,69 @@
 <?php
-	//session_start();
+//session_start();
 ?>
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <link href="css/ayudante.css" rel="stylesheet">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SESIONES</title>
-    
-  </head>
-  <body>
+<!DOCTYPE html>
+<html>
 
-<!-- Navegación-->
-<div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
-  <button class="menu-icon" type="button" data-toggle></button>
-  <div class="title-bar-title"></div>
-</div>
+<head>
+  <link rel="stylesheet" href="CSS/Menu.css">
+  <!-- Bootstrap CSS JS - DISEÑO RESPONSIVE -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-<div id="menu" >
-	<strong>
-	<ul>
-	
-	 <li class="f"><a href="principal.html">PAGINA PRINCIPAL</a></li>
-	 <li class="e"><a href="comentario/3.html" >COMENTARIOS</a></li>
-	 <li class="f"><a href="PEDIDOS/uno.html">PEDIDOS EN LINEA</a></li>
-	</ul>
+<body>
 
-	</strong>
-</div>
-<!-- /Navegacion -->
-
-<br>
-
-<div class="row">
-
-
-  <div class="medium-5 large-3 columns">
-    <div class="callout secondary">
-      <form action="validarsesion.php" method="POST">
-        <div class="row">
-          <div class="small-12 columns">
-            <label>Ingrese su usuario
-              <input type="text" placeholder="Ingrese Usuario" name="usuario">
-            </label>
+  <div class="topnav" id="myTopnav">
+    <!-- 
+  <a href="#home" class="active">Home</a> -->
+    <a href="principal.html">PAGINA PRINCIPAL</a>
+    <a href="comentario/3.html">COMENTARIOS</a>
+    <a href="PEDIDOS/uno.html">PEDIDOS EN LINEA</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="container formulario">
+    <div class="card col-lg-8 col-12">
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Ingrese su usuario: </label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese el nombre de Usuario">
+            
           </div>
-          <div class="small-12 columns">
-            <label>Ingrese su contraseña
-              <input type="number" placeholder="1234" name="clave">
-            </label>
-            <center><button type="submit" class="button">Ingresar</button>
-			<!-- <button type="submit" class="button">Cerrar </button></center> -->
-		   </div>
-        </div> 
-      </form>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Ingresa su contraseña: </label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su contraseña">
+          </div>
+          <button type="submit" class="btn btn-primary">Ingresar</button>
+        </form>
+      </div>
     </div>
   </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
 
-</div>
 
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-  </body>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
 </html>

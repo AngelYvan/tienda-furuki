@@ -1,53 +1,133 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
 
-<title>pedidos en kuro</title>
-<link rel="stylesheet" href="formatopropio.css">
+    <title>pedidos en kuro</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+
 <body>
-    <div class="row" with=100%>
-   
-    <div class="column">
-<h1>PEDIDOS</h1>
-<form action="PROCESOS.PHP" method="post" class="form-register">
-        <h2 class="form_titulo">PEDIDO</h2>
-        <div class="contenedor-inputs">
-        Su nombre: <input type="text" name="nombrecli"            placeholder="nombre" class="input-48" required><br>
-  Su telefono: <input type="text" name="telefono" placeholder="telefono" class="input-100" required><br>
-        
-            Plato:<select name="VARIABLE2">
-    <option value="Saku de pulpo">Saku de pulpo</option>
-    <option value=">Gunkan de pulpo">Gunkan de pulpo</option>
-    <option value="California">California</option>
-    <option value="Kaiozama">Kaiozama</option>
-    <option value="Kuro maki">Kuro maki</option>
-    <option value="Anticuchero">Anticuchero</option>
-    <option value="Cauche">Cauche</option>
-    <option value="Misti">Misti</option>
-    <option value="Alalau Maki">Alalau Maki</option>
-    <option value="Ceviche Nikkei al olivo">Ceviche Nikkei al olivo</option>
-    <option value="Chizu">Chizu</option>
-    </select><br>
-            
-            Can:tidad
-            <input type="text" name="CANTIDAD">
+    <div class="container">
+
+        <div class="column">
+            <h1>PEDIDOS</h1>
+            <hr>
+            <div class="container formulario">
+                <div class="card col-lg-6 col-12 ">
+
+                    <form action="PROCESOS.PHP" method="post" class="form-register">
+                        <div class="card-header">
+                            <h2 class="form_titulo">PEDIDO</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="contenedor-inputs">
+                                <div class="form-group">
+                                    Su nombre: <input type="text" name="nombrecli" placeholder="nombre" class="form-control" required>
+                                    <br>
+                                </div>
+                                <div class="form-group">
+                                    Su telefono: <input type="text" name="telefono" placeholder="telefono" class="form-control" required>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    Plato:
+                                    <select name="VARIABLE2" class="form-control">
+                                        <option value="Saku de pulpo">Saku de pulpo</option>
+                                        <option value=">Gunkan de pulpo">Gunkan de pulpo</option>
+                                        <option value="California">California</option>
+                                        <option value="Kaiozama">Kaiozama</option>
+                                        <option value="Kuro maki">Kuro maki</option>
+                                        <option value="Anticuchero">Anticuchero</option>
+                                        <option value="Cauche">Cauche</option>
+                                        <option value="Misti">Misti</option>
+                                        <option value="Alalau Maki">Alalau Maki</option>
+                                        <option value="Ceviche Nikkei al olivo">Ceviche Nikkei al olivo</option>
+                                        <option value="Chizu">Chizu</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    Cantidad
+                                    <input class="form-control" type="text" name="CANTIDAD">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="form-group col-12">
+                                <button class="btn btn-success col-12" type="submit" class="btn-enviar">Grabar</button>
+                            </div>
+                            <div class="column centrar">
+                                <a href="../principal.HTML" style="text-decoration: none; color: black;">
+                                    PANTALLA PRINCIPAL
+                                </a><br>
+                                <a href="PORTERO.HTML">[  PARA EL DUEÑO  ]</a>
+
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <input type="submit" value="grabar" class="btn-enviar">
-    
-    <div class="column centrar">
-    <H3 class="centrar">PANTALLA PRINCIPAL</H3>
-    <a href="PORTERO.HTML">[  PARA EL DUEÑO  ]</a> 
-    
-    
         </div>
-        
-        </form>  
+        <!-- <div class="card col-lg-6 col-12">
+                <div class="card-body">
+                    <form action="PROCESOS.PHP" method="post" class="form-register">
+                        <h2 class="form_titulo">PEDIDO</h2>
+                        <div class="contenedor-inputs">
+                            <div class="form-group">
+                                Su nombre: <input type="text" name="nombrecli" placeholder="nombre" class="form-control" required>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                Su telefono: <input type="text" name="telefono" placeholder="telefono" class="form-control" required>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                Plato:
+                                <select name="VARIABLE2" class="form-control">
+                                    <option value="Saku de pulpo">Saku de pulpo</option>
+                                    <option value=">Gunkan de pulpo">Gunkan de pulpo</option>
+                                    <option value="California">California</option>
+                                    <option value="Kaiozama">Kaiozama</option>
+                                    <option value="Kuro maki">Kuro maki</option>
+                                    <option value="Anticuchero">Anticuchero</option>
+                                    <option value="Cauche">Cauche</option>
+                                    <option value="Misti">Misti</option>
+                                    <option value="Alalau Maki">Alalau Maki</option>
+                                    <option value="Ceviche Nikkei al olivo">Ceviche Nikkei al olivo</option>
+                                    <option value="Chizu">Chizu</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                Cantidad
+                                <input class="form-control" type="text" name="CANTIDAD">
+                            </div>
+                        </div>
+                        <div class="form-group col-12">
+                            <button class="btn btn-success col-12" type="submit" class="btn-enviar">Grabar</button>
+                        </div>
+                        <div class="column centrar">
+                            <H3 class="centrar">PANTALLA PRINCIPAL</H3>
+                            <a href="PORTERO.HTML">[  PARA EL DUEÑO  ]</a>
+
+
+                        </div>
+
+                    </form>
+                </div>
+            </div> -->
+    </div>
 
     </div>
-         
-    </div>
-    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
 </html>

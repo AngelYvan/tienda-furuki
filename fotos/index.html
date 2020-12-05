@@ -1,37 +1,106 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Galeria Con LightBox</title>
-		<link rel="stylesheet" type="text/css" href="css/estilo.css">
-		<link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
-		
-	</head>
-	
-	<body>
-	<div id="caja123"> GALERIA</div>
-	 <div class="cajas">
-		<div class="contenedor-galeria">
-			<a href="img/galeria01.jpg" data-lightbox="M1" data-title="M1"><div class="img1"></div></a>
-			<a href="img/galeria02.jpg" data-lightbox="M2" data-title="M2"><div class="img2"></div></a>
-			<a href="img/galeria03.jpg" data-lightbox="M3" data-title="M3"><div class="img3"></div></a>
-			<a href="img/galeria04.jpg" data-lightbox="M4" data-title="M4"><div class="img4"></div></a>
-			<a href="img/galeria05.jpg" data-lightbox="M5" data-title="M5"><div class="img5"></div></a>
-			<a href="img/galeria06.jpg" data-lightbox="M6" data-title="M6"><div class="img6"></div></a>
-			</div>
-		        </div>
-		</div>
-	</body>
-	<script src="js/lightbox-plus-jquery.min.js">
-	</script>
-	<nav class="navegacion1">
-	<center>
-	<ul >
-	  <li><a href="../principal.HTML">REGRESAR</a>
 
-	</ul>
-	</center>
-	</nav>
-</html>
+<head>
+    <title>Galeria Con LightBox</title>
+    <meta charset="utf-8" />
+</head>
+
+<link rel="stylesheet" type="text/css" href="css/estilo.css">
+<link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<body>
+    <div class="contenedor">
+        <div id="caja123"> GALERIA</div>
+
+        <section class="portfolio" id="portfolio">
 
 
-	 
+            <div class="portfolio-grid col-12">
+                <div class="row">
+
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="img/galeria01.jpg" data-lightbox="M1" data-title="M1">
+                                <div class="imagen img1"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="img/galeria02.jpg" data-lightbox="M2" data-title="M2">
+                                <div class="imagen img2"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="img/galeria03.jpg" data-lightbox="M3" data-title="M3">
+                                <div class="imagen img3"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="img/galeria04.jpg" data-lightbox="M4" data-title="M4">
+                                <div class="imagen img4"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="img/galeria05.jpg" data-lightbox="M5" data-title="M5">
+                                <div class="imagen img5"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="img/galeria06.jpg" data-lightbox="M6" data-title="M6">
+                                <div class="imagen img6"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="img/galeria01.jpg" data-lightbox="M7" data-title="M7">
+                                <div class="imagen img1"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="img/galeria02.jpg" data-lightbox="M8" data-title="M8">
+                                <div class="imagen img2"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="../principal.HTML" type="submit" class="btn btn-primary">Regresar</a>
+            </div>
+
+        </section>
+        <!-- /Portfolio -->
+
+    </div>
+    <script src="js/lightbox-plus-jquery.min.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="3.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+</body>

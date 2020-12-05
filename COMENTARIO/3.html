@@ -1,75 +1,82 @@
 <html>
+
 <head>
-<title> FORMULARIO DE INSCRIPCION</title>
-  <meta charset="utf-8" />
+    <title> FORMULARIO DE INSCRIPCION</title>
+    <meta charset="utf-8" />
 </head>
-<link href="3.css"rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+<link href="3.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <body>
+    <div class="contenedor">
 
-<div class="container">
-  <div class="faders">
-    <div class="left"></div>
-    <div class="right"></div>
-  </div>
 
-  <div class="items">
-    <div class="entry">
-      <p class="name">John Doe</p>
-      <img src="5.jpg" width="200px" height="150px" alt="Smiling person" />
-      <p class="quote">"Me fascino la comida , puedo indicar que es de muy buena calidad y definitivamente volvería sin pensarlo, 
-	  lo recomiendo para todos los amantes del sushi y los que no lo son se volverán probando la exquisita comida."</p>
-    </div>
-    <div class="entry">
-      <p class="name">Mario Castillo</p>
-      <img src="2.jpg " width="200px" height="150px" alt="Smiling person" />
-      <p class="quote">"Fureki uno de los mejores restaurantes de sushi al que he tenido la oportunidad de ir, me encantaron los productos de calidad y 
-	  el servicio de delivery brindado excelente cumple todas mis expectativas como cliente."</p>
-    </div>
-    <div class="entry">
-      <p class="name">José Carpio</p>
-      <img src="3.jpg" width="200px" height="150px" alt="Smiling person" />
-      <p class="quote">"Mi experiencia en Fureki fue una de las mejores un servicio de calidad y rapidez junto el sushi de muy buena calidad y sabor, 
-	  recomiendo al 100% este restaurante de sushi innovador "</p>
-    </div>
-    <div class="entry">
-      <p class="name">Andrea Fernandez</p>
-      <img src="4.jpg" width="200px" height="150px" alt="Smiling person" />
-      <p class="quote">"El mejor sushi que me he comido en mi vida! Era flameado delicioso. Muy bien presentado.
-el servicio delivery es muy  bueno y la presentación es la mejor "</p>
-    </div>
-    <div class="entry">
-      <p class="name">Alejandra López</p>
-      <img src="1.jpg" width="200px" height="150px" alt="Smiling person" />
-      <p class="quote">"Los mejores productos los makis estaban a un punto y equilibrio de sabores perfectos, además disfrute con mi familia un rico sushi en casa. "</p>
-    </div>
-    <div class="entry">
-      <p class="name">Josh Smith</p>
-      <img src="6.jpg" width="200px" height="150px" alt="Smiling person" />
-      <p class="quote">"Es exquisito! Realmente los makis de FUREKI son deliciosos. Frescos, se nota que usan productos de primera calidad. Variedad, sabor, calidad, 
-	  me encanta este sushi y a mi hijo también!"</p>
-    </div>
-    <div class="entry">
-      <p class="name">Almendra Alvarez</p>
-      <img src="7.jpg" width="200px" height="150px" alt="Smiling person" />
-      <p class="quote">"En esta cadena ofertan un sushi muy peruanizado. Es agradable para el paladar peruano y muy recomendado."</p>
-    </div>
-    <div class="entry">
-      <p class="name">Alejandro Torres</p>
-      <img src="9.jpg" width="200px" height="150px" alt="Smiling person" />
-      <p class="quote">"Siempre a la hora de almuerzo pido de FUREKIr,el servicio delivery rápido y hay buenas ofertas. Para salir del apuro"</p>
-    </div>
-  </div>
-</div>
+        <div class="carousel">
+            <div class="carousel__contenedor">
+                <button aria-label="Anterior" class="carousel__anterior">
+					<i class="fas fa-chevron-left"></i>
+				</button>
 
-<center>
-	<nav class="navegacion1">
-	<ul >
-	  <li><a href="../principal.HTML">REGRESAR</a>
-	
-	</ul>
-	</nav>
-	</center>
-<script src="3.js"></script>
+                <div class="carousel__lista">
+                    <div class="carousel__elemento">
+                        <img src="9.jpg" alt="Rock and Roll Hall of Fame">
+                        <p class="name">John Doe</p>
+                        <p class="quote">"Me fascino la comida , puedo indicar que es de muy buena calidad y definitivamente volvería sin pensarlo, lo recomiendo para todos los amantes del sushi y los que no lo son se volverán probando la exquisita comida."</p>
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="1.jpg" alt="Constitution Square - Tower I">
+                        <p class="name">Mario Castillo</p>
+                        <p class="quote">"Fureki uno de los mejores restaurantes de sushi al que he tenido la oportunidad de ir, me encantaron los productos de calidad y el servicio de delivery brindado excelente cumple todas mis expectativas como cliente."</p>
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="7.jpg" alt="Empire State Building">
+                        <p class="name">José Carpio</p>
+                        <p class="quote">"Mi experiencia en Fureki fue una de las mejores un servicio de calidad y rapidez junto el sushi de muy buena calidad y sabor, recomiendo al 100% este restaurante de sushi innovador "</p>
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="6.jpg" alt="Harmony Tower">
+                        <p class="name">Andrea Fernandez</p>
+                        <p class="quote">"El mejor sushi que me he comido en mi vida! Era flameado delicioso. Muy bien presentado. el servicio delivery es muy bueno y la presentación es la mejor "</p>
+                    </div>
 
-<script src="3.js"></script>
+                    <div class="carousel__elemento">
+                        <img src="5.jpg" alt="Empire State Building">
+                        <p class="name">Alejandra López</p>
+                        <p class="quote">"Los mejores productos los makis estaban a un punto y equilibrio de sabores perfectos, además disfrute con mi familia un rico sushi en casa. "</p>
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="4.jpg" alt="Harmony Tower">
+                        <p class="name">Josh Smith</p>
+                        <p class="quote">"Es exquisito! Realmente los makis de FUREKI son deliciosos. Frescos, se nota que usan productos de primera calidad. Variedad, sabor, calidad, me encanta este sushi y a mi hijo también!"</p>
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="4.jpg" alt="Empire State Building">
+                        <p class="name">Almendra Alvarez</p>
+                        <p class="quote">"En esta cadena ofertan un sushi muy peruanizado. Es agradable para el paladar peruano y muy recomendado."</p>
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="3.jpg" alt="Harmony Tower">
+                        <p class="name">Alejandro Torres</p>
+                        <p class="quote">"Siempre a la hora de almuerzo pido de FUREKIr,el servicio delivery rápido y hay buenas ofertas. Para salir del apuro"</p>
+                    </div>
+                </div>
+
+                <button aria-label="Siguiente" class="carousel__siguiente">
+					<i class="fas fa-chevron-right"></i>
+				</button>
+            </div>
+
+            <div role="tablist" class="carousel__indicadores"></div>
+        </div>
+        <a href="../principal.HTML" type="submit" class="btn btn-primary">Regresar</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="3.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
 </body>
