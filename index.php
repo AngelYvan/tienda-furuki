@@ -10,6 +10,7 @@
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="./img/5.jpeg" type="image/x-icon">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
         <form>
           <div class="form-group">
             <label for="exampleInputEmail1">Ingrese su usuario: </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese el nombre de Usuario">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese el nombre de Usuario">
             
           </div>
           <div class="form-group">
