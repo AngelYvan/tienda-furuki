@@ -39,6 +39,7 @@ ECHO"distrito registrado :".$distrito."<br>";
 ECHO"Telefono registrado :".$telefono."<br>";
 ECHO"Medio de Pago :".$mediopago."<br>";
 ECHO"Chef :".$chef."<br>";
+
 //ECHO"numitems registrado :".$numItems."<br>";
 for($i = 0; $i < $intItems; $i=$i+1){
   $iMas=$i+1;
@@ -66,9 +67,9 @@ while($row = mysqli_fetch_array($datosChef)) {
   $temp++;
 }
 
-/*echo $dniChef;
-echo $nombreChef;
-echo $apellidoChef;*/
+echo "DNI Chef : ".$dniChef."<br>";
+echo "Nombre : ".$nombreChef;
+echo " ". $apellidoChef;
 
 $numBoletas=0;
 $consultaNumBoletas= 'SELECT COUNT(*) FROM boleta';
@@ -154,49 +155,33 @@ for($i=0;$i<count($productos);$i++){
   echo "</tr>";
 }
 echo "</table>";
-//echo count($productos)."<br>";
+
+//guardar boleta
+echo "Numero de boleta=".((int)$numBoletas[0]+1)."<br>";
+/*$consultaBoleta= 'INSERT INTO  boleta (num_bolet, fech_bolet, medpago, DNI_cliente, import_bolet, IGV_bolet, import_total_bolet, dni_chef) 
+VALUES ('.((int)$numBoletas+1).',"'.date("Y").date("m").date("d").'","'.$mediopago.'",'.(int)$dni.','.0.','.0.','.0.','.$dniChef.')';*/
+$consultaBoleta= 'INSERT INTO  boleta (num_bolet, fech_bolet, medpago, DNI_cliente, dni_chef) 
+VALUES ('.((int)$numBoletas[0]+1).',"'.date("Y").date("m").date("d").'","'.$mediopago.'",'.(int)$dni.','.$dniChef.')';
+$datosBoleta = mysqli_query($conexion, $consultaBoleta);
+//$consultaBoleta= 'INSERT INTO  boleta (`num_bolet`, `fech_bolet`, `medpago`, `DNI_cliente`, `import_bolet`, `IGV_bolet`, `import_total_bolet`, `dni_chef`) VALUES (19, "2020-11-18", "Efectivo", 78092145, "26", "5", "31", 18361425)';
+//$datosBoleta = mysqli_query($conexion, $consultaBoleta);
+if (!$datosBoleta) {
+  die('Consulta no válida: ' . mysqli_error($conexion));
+}
 
 
-
-
-
-
-
-/*$tamArrProdComprados=count($arrProdComprados);
-for($i=0;$tamArrProdComprados;$i++){
-
-}*/
+//guardar detalle de boleta
+for($i=0;$i<count($productos);$i++){
+  $consultaProducto= 'INSERT INTO  `detalle boleta` (num_bolet, cod_produc, cant_produc) VALUES ('.((int)$numBoletas[0]+1).',"M1",'.$productos[$i][3].')';
+  $datosProducto = mysqli_query($conexion, $consultaProducto);
+  if (!$datosProducto) {
+    die('Consulta no válida: ' . mysqli_error($conexion));
+  }
+}
 
 echo '<a href="principal.php">Regresar</a>';
-//header("location:../principal.html");
-
-/* $NOM=$_REQUEST['nombrecli'];
-   
-   $FON=$_POST['telefono'];
-   $PLA=$_POST['VARIABLE2'];
-$CAN=$_POST['CANTIDAD'];
-   
-   $TOTAL=$N1+$N2+$N3+$N4+$N5;
-   $PROME=$TOTAL/5;
-   ECHO'<DIV ID="FONDO02">';
-     ECHO"<p class='pl3'>";
-       ECHO"Telefono registrado :".$FON."<br>";
-     ECHO"</p>";
-   ECHO"<p class='pl1'>EL NOMBRE ES:</p> <p class='pl2'>$NOM</p><br>";
-   ECHO"Supedido es $PLA y la cantidad es $CAN";
-   
-   ECHO '</DIV>';*/
-/*MANDANDO A DOCUMENTO*/
-/*$FP=fopen("pedidos.txt","a");
-fputs($FP,$NOM.PHP_EOL);
-fputs($FP,$FON.PHP_EOL);
-fputs($FP,$PLA.PHP_EOL);
-fputs($FP,$CAN.PHP_EOL);
-fputs($FP,"---------");
-fputs($FP,PHP_EOL);
-fclose($FP);*/
-?>
 
       
+?>
   </body>
 </html>
