@@ -136,6 +136,10 @@ while($row = mysqli_fetch_array($datosProdComprados)) {
   }
   $temp++;
 }
+$import_bolet=0;
+$IGV_bolet=0;
+$import_total_bolet=0;
+
 
 //echo count($productos)."<br>";
 echo "<table>
@@ -153,15 +157,25 @@ for($i=0;$i<count($productos);$i++){
   echo "<td>" . $productos[$i][2] . "</td>";
   echo "<td>" . $productos[$i][3] . "</td>";
   echo "</tr>";
+  $import_bolet=$import_bolet+(int)$productos[$i][2];
 }
 echo "</table>";
+$IGV_bolet=(int)($import_bolet*0.18);
+$import_total_bolet=$import_bolet+$IGV_bolet;
+echo "Importe de Boleta = ".$import_bolet."<br>";
+echo "IGV de boleta = ".$IGV_bolet."<br>";
+echo "Importe TOTAL = ".$import_total_bolet."<br>";
+
+
 
 //guardar boleta
 echo "Numero de boleta=".((int)$numBoletas[0]+1)."<br>";
 /*$consultaBoleta= 'INSERT INTO  boleta (num_bolet, fech_bolet, medpago, DNI_cliente, import_bolet, IGV_bolet, import_total_bolet, dni_chef) 
 VALUES ('.((int)$numBoletas+1).',"'.date("Y").date("m").date("d").'","'.$mediopago.'",'.(int)$dni.','.0.','.0.','.0.','.$dniChef.')';*/
-$consultaBoleta= 'INSERT INTO  boleta (num_bolet, fech_bolet, medpago, DNI_cliente, dni_chef) 
-VALUES ('.((int)$numBoletas[0]+1).',"'.date("Y").date("m").date("d").'","'.$mediopago.'",'.(int)$dni.','.$dniChef.')';
+/*$consultaBoleta= 'INSERT INTO  boleta (num_bolet, fech_bolet, medpago, DNI_cliente, dni_chef) 
+VALUES ('.((int)$numBoletas[0]+1).',"'.date("Y").date("m").date("d").'","'.$mediopago.'",'.(int)$dni.','.$dniChef.')';*/
+$consultaBoleta= 'INSERT INTO  boleta (num_bolet, fech_bolet, medpago, DNI_cliente, import_bolet, IGV_bolet, import_total_bolet, dni_chef) 
+VALUES ('.((int)$numBoletas[0]+1).',"'.date("Y").date("m").date("d").'","'.$mediopago.'",'.(int)$dni.','.$import_bolet.','.$IGV_bolet.','.$import_total_bolet.','.$dniChef.')';
 $datosBoleta = mysqli_query($conexion, $consultaBoleta);
 //$consultaBoleta= 'INSERT INTO  boleta (`num_bolet`, `fech_bolet`, `medpago`, `DNI_cliente`, `import_bolet`, `IGV_bolet`, `import_total_bolet`, `dni_chef`) VALUES (19, "2020-11-18", "Efectivo", 78092145, "26", "5", "31", 18361425)';
 //$datosBoleta = mysqli_query($conexion, $consultaBoleta);
@@ -172,7 +186,7 @@ if (!$datosBoleta) {
 
 //guardar detalle de boleta
 for($i=0;$i<count($productos);$i++){
-  $consultaProducto= 'INSERT INTO  `detalle boleta` (num_bolet, cod_produc, cant_produc) VALUES ('.((int)$numBoletas[0]+1).',"M1",'.$productos[$i][3].')';
+  $consultaProducto= 'INSERT INTO  `detalle boleta` (num_bolet, cod_produc, cant_produc) VALUES ('.((int)$numBoletas[0]+1).',"'.$productos[$i][0].'",'.$productos[$i][3].')';
   $datosProducto = mysqli_query($conexion, $consultaProducto);
   if (!$datosProducto) {
     die('Consulta no válida: ' . mysqli_error($conexion));
