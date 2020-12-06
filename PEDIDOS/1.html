@@ -54,6 +54,7 @@
             let $carrito = document.querySelector('#carrito');
             let $total = document.querySelector('#total');
             let $botonVaciar = document.querySelector('#boton-vaciar');
+            let $botonComprar = document.querySelector('#boton-comprar');
 
             // Funciones
             function renderItems() {
@@ -172,9 +173,21 @@
                 calcularTotal();
             }
 
+            function pasarVariables() {
+                pagina='uno.html';
+                nombres='carrito';
+                console.log(carrito);
+                pagina +="?";
+                console.log("Lanzado");
+                nomVec = nombres.split(",");
+                for (i=0; i<nomVec.length; i++)
+                    pagina += nomVec[i] + "=" + escape(eval(nomVec[i]))+"&";
+                pagina = pagina.substring(0,pagina.length-1);
+                location.href=pagina;
+            }
             // Eventos
             $botonVaciar.addEventListener('click', vaciarCarrito);
-
+            $botonComprar.addEventListener('click', pasarVariables);
             // Inicio
             renderItems();
         }
@@ -201,7 +214,7 @@
                 <!-- Precio total -->
                 <p class="text-right">Total: <span id="total"></span>&euro;</p>
                 <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-                <a type="button" class="btn btn-success" href="uno.html">COMPRAR</a>
+                <button id="boton-comprar" class="btn btn-success">COMPRAR</button>
 
             </aside>
         </div>
