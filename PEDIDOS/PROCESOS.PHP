@@ -157,7 +157,7 @@ for($i=0;$i<count($productos);$i++){
   echo "<td>" . $productos[$i][2] . "</td>";
   echo "<td>" . $productos[$i][3] . "</td>";
   echo "</tr>";
-  $import_bolet=$import_bolet+(int)$productos[$i][2];
+  $import_bolet=$import_bolet+((int)$productos[$i][2]*(int)$productos[$i][3]);
 }
 echo "</table>";
 $IGV_bolet=(int)($import_bolet*0.18);
