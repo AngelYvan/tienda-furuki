@@ -19,47 +19,86 @@
 
     <!-- Bootstrap CSS JS - DISEÑO RESPONSIVE -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <!-- FONT AWESOME - ICONOS -->
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-
     <!-- JAVASCRIPT -->
     <script type="text/javascript" src="engine0/jquery.js"></script>
     <!-- JAVASCRIPT -->
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css'>
+    <!-- Bootstrap JS -->
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="img/5.jpeg" type="image/x-icon">
     <style>
-        * {
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+        /*-- testimonial Section CSS --*/
+        
+        #testimonial {
+            padding: 10px 0px 10px;
+            color: #fff;
+            background-color: rgba(109, 207, 202, 0.75);
+            height: auto;
+            margin-bottom: 3em;
         }
         
-        body {
-            font-family: sans-serif;
+        @media (max-width: 434px) {
+            #testimonial {
+                margin-bottom: 2em;
+                height: 400px;
+            }
         }
         
-        .gallery {
-            background: #EEE;
+        @media (max-width: 334px) {
+            #testimonial {
+                margin-bottom: 2em;
+                height: 480px;
+            }
         }
         
-        .gallery-cell {
-            width: 100%;
-            height: 300px;
-            background: #8C8;
-            /* background-image: url('./img/1.jpeg'); */
-            /* 
-            background: #8C8;
-            counter-increment: gallery-cell; */
-        }
-        /* cell number */
-        
-        .gallery-cell:before {
-            display: block;
+        #testimonial h2 {
+            font-style: italic;
+            color: #fff;
+            font-size: 26px;
             text-align: center;
-            /* 
-            content: counter(gallery-cell); */
-            font-size: 80px;
+        }
+        
+        #testimonial .client-img {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border: 3px solid #fff;
+            margin: 0px auto;
+            position: absolute;
+            left: 0px;
+        }
+        
+        #testimonial .carousel-content {
+            padding: 20px 0px 20px 20px;
+            width: 100%;
+            margin-bottom: 0;
+            position: relative;
+            height: 100%;
+        }
+        
+        #testimonial h3 {
+            font-size: 17px;
+            color: #fff;
+            margin-bottom: 30px;
+            font-style: italic;
+            text-align: right;
+        }
+        
+        #testimonial p {
+            font-size: 15px;
+        }
+        
+        #testimonial .client-img img {
+            width: 100%;
         }
     </style>
 </head>
@@ -112,6 +151,7 @@
                     <li class="e"><a href="comentario/3.html">COMENTARIOS</a></li>
                     <li class="g"><a href="fotos/index.html" name="caja123">FOTOS</a></li>
                     <li class="f"><a href="PEDIDOS/1.html">PEDIDOS EN LINEA</a></li>
+
                 </ul>
 
 
@@ -124,7 +164,7 @@
     <!-- About -->
 
     <div id="sn">SOBRE NOSOTROS</div>
-    <div class="container col-12">
+    <!-- <div class="container col-12">
         <div id="caja02">
             <div class="item item-1">
                 <h1><strong><code>“Fureki”</code></strong></h1>
@@ -172,55 +212,81 @@
 
     </div>
     <br>
-    <br>
+    <br> -->
+    <!-- Testimonials Section -->
+    <section id="testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Slide Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#testimonialCarousel" data-slide-to="1"></li>
+                            <li data-target="#testimonialCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active col-12">
+                                <div class="carousel-content">
+                                    <div class="row">
+                                        <div class="col-lg-5 col-12">
+                                            <div class="client-img"><img src="img/1.jpg" alt="Testimonial Slider" /></div>
+                                        </div>
+                                        <div class="col-lg-7 col-12">
+                                            <h1><strong><code>“Fureki”</code></strong></h1>
+                                            <p>
+                                                Fureki les da la bienvenida,somos un restaurante delivery que vende comida japonesa, sushi y otros productos. En nuestra carta incluimos platos como makis, de diferentes sabores. Entre los sabores incluimos Furai, acevichado, baby, california, yakuza,
+                                                parrillero, anticuchero, futari y lomito. También tenemos Poke bowls, un plato a base de arroz que puedes elegir toppings como salmón, atún o langostino, y diferentes verduras.
+                                            </p>
+                                        </div>
+                                    </div>
 
-    <!-- Flickity HTML init -->
-    <div class="col-8 gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-        <div class="gallery-cell">
-            <div class="item item-5">
-                <img src="img/1.jpg" width="100%" height="300px">
-            </div>
-            <div class="item item-1 " width="100%">
-                <h1><strong><code>“Fureki”</code></strong></h1>
-                <p>
-                    Fureki les da la bienvenida,somos un restaurante delivery que vende comida japonesa, sushi y otros productos. En nuestra carta incluimos platos como makis, de diferentes sabores. Entre los sabores incluimos Furai, acevichado, baby, california, yakuza,
-                    parrillero, anticuchero, futari y lomito. También tenemos Poke bowls, un plato a base de arroz que puedes elegir toppings como salmón, atún o langostino, y diferentes verduras.
-                </p>
-            </div>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="carousel-content">
+                                    <div class="row">
+                                        <div class="col-lg-5 col-12">
+                                            <div class="client-img"><img src="img/fondo9.jpg" alt="Testimonial Slider" /></div>
+                                        </div>
+                                        <div class="col-lg-7 col-12">
+                                            <h1><strong><code>Misión:</code></strong></h1>
+                                            <p>
+                                                Somos un restaurante que buscamos vender platos de calidad e innovadores con ingredientes de primera que sean del agrado de nuestros clientes. Buscamos proveer la atención adecuada y de manera rápida para obtener la preferencia de nuestros clientes.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="carousel-content">
+                                    <div class="row">
+                                        <div class="col-lg-5 col-12">
+                                            <div class="client-img"><img src="img/3.jpg" alt="Testimonial Slider" /></div>
+                                        </div>
+                                        <div class="col-lg-7 col-12">
+                                            <h1><strong><code>Visión:</code></strong></h1>
+                                            <p>
+                                                Queremos ser un restaurante de comida japonesa con atención y de categoría alta, siendo así la preferencia de nuestros clientes por lograr una atención muy buena y con platos innovadores. Lograr la preferencia por nuestra atención, calidad, confiabilidad,
+                                                sabor y buen servicio, satisfaciendo las necesidades de nuestros clientes.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-            <div class="item item-2">
-                <img src="img/1.jpg" width="100%" height="300px">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="gallery-cell">
-            <div class="item item-1">
-                <h1><strong><code>Misión:</code></strong></h1>
-                <p>
-                    Somos un restaurante que buscamos vender platos de calidad e innovadores con ingredientes de primera que sean del agrado de nuestros clientes. Buscamos proveer la atención adecuada y de manera rápida para obtener la preferencia de nuestros clientes.
-                </p>
-            </div>
+    </section>
+    <!-- End testimonials Section -->
 
-            <div class="item item-2">
-                <p>
-                    <img src="img/fondo9.jpg" width="100%" height="300px">
-                </p>
-            </div>
-        </div>
-        <div class="gallery-cell">
-            <div class="item item-1">
-                <h1><strong><code>Visión:</code></strong></h1>
-                <p>
-                    Queremos ser un restaurante de comida japonesa con atención y de categoría alta, siendo así la preferencia de nuestros clientes por lograr una atención muy buena y con platos innovadores. Lograr la preferencia por nuestra atención, calidad, confiabilidad,
-                    sabor y buen servicio, satisfaciendo las necesidades de nuestros clientes.
-                </p>
-            </div>
-
-            <div class="item item-2">
-                <img src="img/3.jpg" width="100%" height="300px">
-            </div>
-        </div>
-
-    </div>
     <!-- About -->
 
     <!-- /About -->
@@ -307,8 +373,6 @@
     <script src="JAVA/7.js"></script>
     <script src="7.js"></script>
     <!-- partial -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js'></script>
-    <script src="./script.js"></script>
 </body>
 
 </html>

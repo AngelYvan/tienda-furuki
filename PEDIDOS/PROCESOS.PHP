@@ -32,6 +32,9 @@ for($i = 0; $i < $intItems; $i=$i+1){
 $consulta= 'INSERT INTO  cliente (DNI_cliente, nom_cliente, direc_cliente, distrito_cliente, telf_cliente) VALUES ('.$dni.',"'.$nombre.'","'.$direccion.'","'.$distrito.'",'.$telefono.')';
 $datos = mysqli_query($conexion, $consulta);
 
+
+header("location:../principal.html");
+
 /* $NOM=$_REQUEST['nombrecli'];
    
    $FON=$_POST['telefono'];
