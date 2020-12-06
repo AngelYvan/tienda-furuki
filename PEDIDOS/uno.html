@@ -9,6 +9,41 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script>
+        let arreglo=[];
+        let pos=1;
+        console.log("Hola");
+        cadVariables = location.search.substring(1,location.search.length);
+        console.log(cadVariables);
+        cadVariables=cadVariables.substring(8,cadVariables.length);
+        console.log(cadVariables);
+        console.log(cadVariables.length);
+        console.log("dividir");
+        /*while(cadVariables.length>=1){
+            arreglo.push(cadVariables.substring(0,1));
+            console.log(arreglo);
+            cadVariables=cadVariables.substring(4,cadVariables.length);
+            console.log(cadVariables);
+        }*/
+        
+        window.onload = function () {
+            while(cadVariables.length>=1){
+            arreglo.push(cadVariables.substring(0,1));
+            console.log(arreglo);
+            cadVariables=cadVariables.substring(4,cadVariables.length);
+            console.log(cadVariables);
+            }
+            for(let item in arreglo){
+                console.log(pos);
+                $("#pedidos").append(
+                    //'<input id="cantidadItems" type="hidden" name="item"'+pos+' value="'+arreglo[pos]+'">'
+                    '<input id="cantidadItems" type="hidden" name="item'+pos+'" value="'+arreglo[(pos-1)]+'">'
+                );
+                pos=pos+1;
+                document.getElementById("cantidadItems").value=pos;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -20,20 +55,33 @@
             <div class="container formulario">
                 <div class="card col-lg-6 col-12 ">
 
-                    <form action="PROCESOS.PHP" method="post" class="form-register">
+                    <form id="pedidos" action="PROCESOS.PHP" method="post" class="form-register">
                         <div class="card-header">
                             <h2 class="form_titulo">PEDIDO</h2>
                         </div>
                         <div class="card-body">
                             <div class="contenedor-inputs">
                                 <div class="form-group">
-                                    Su nombre: <input type="text" name="nombrecli" placeholder="nombre" class="form-control" required>
+                                    Su DNI: <input type="text" name="dni" placeholder="dni" class="form-control" required>
+                                    <br>
+                                </div>
+                                <div class="form-group">
+                                    Su nombre: <input type="text" name="nombre" placeholder="nombre" class="form-control" required>
+                                    <br>
+                                </div>
+                                <div class="form-group">
+                                    Su direccion: <input type="text" name="direccion" placeholder="direccion" class="form-control" required>
+                                    <br>
+                                </div>
+                                <div class="form-group">
+                                    Su distrito: <input type="text" name="distrito" placeholder="distrito" class="form-control" required>
                                     <br>
                                 </div>
                                 <div class="form-group">
                                     Su telefono: <input type="text" name="telefono" placeholder="telefono" class="form-control" required>
                                 </div>
-                                <br>
+                                <input id="cantidadItems" type="hidden" name="numItems" value="1"> 
+                                <!--<br>
                                 <div class="form-group">
                                     Plato:
                                     <select name="VARIABLE2" class="form-control">
@@ -54,18 +102,19 @@
                                 <div class="form-group">
                                     Cantidad
                                     <input class="form-control" type="text" name="CANTIDAD">
-                                </div>
+                                </div>-->
+
                             </div>
                         </div>
                         <div class="card-footer">
                             <div class="form-group col-12">
-                                <button class="btn btn-success col-12" type="submit" class="btn-enviar">Grabar</button>
+                                <button class="btn btn-success col-12" type="submit" class="btn-enviar">Confirmar Compra</button>
                             </div>
                             <div class="column centrar">
                                 <a href="../principal.HTML" style="text-decoration: none; color: black;">
                                     PANTALLA PRINCIPAL
                                 </a><br>
-                                <a href="PORTERO.HTML">[  PARA EL DUEÑO  ]</a>
+                                <!--<a href="PORTERO.HTML">[  PARA EL DUEÑO  ]</a>-->
 
 
                             </div>
